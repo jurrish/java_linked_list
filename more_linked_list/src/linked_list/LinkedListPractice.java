@@ -56,4 +56,35 @@ public class LinkedListPractice
         }
     }
 
+    public boolean remove(Object newElement)
+    {
+        //what happens if it's empty?
+        if(head == null)
+        {
+            return false;
+        }
+        else if(head.data.equals(newElement))
+        {
+            head = head.next;
+            size++;
+            return true;
+        }
+        else
+        {
+            //what happens if head is being removed
+            Node current = head;
+            while(current.next != null && !current.next.data.equals(newElement))
+            {
+                current = current.next;
+            }
+            if(current.next == null)
+            {
+                return false;
+            }
+            current.next = current.next.next;
+            size--;
+            return true;
+        }
+    }
+
 }

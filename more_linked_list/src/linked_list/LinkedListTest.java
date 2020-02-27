@@ -13,6 +13,7 @@ public class LinkedListTest
         myList.add("c");
         myList.add("d");
 
-
+        System.out.println(myList.remove("c"));
+        System.out.println(myList.toString());
     }
 }

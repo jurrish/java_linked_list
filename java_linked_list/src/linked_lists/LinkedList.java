@@ -103,6 +103,11 @@ public class LinkedList
         }
     }
 
+    public void reverse()
+    {
+
+    }
+
     public String toString()
     {
         //print out entire list
